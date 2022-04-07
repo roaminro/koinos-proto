@@ -9,7 +9,7 @@ unzip protoc-${PROTOBUF_VERSION}-linux-x86_64.zip -d protobuf
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go get -u github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@v1.5.0
 
-git clone --recursive https://github.com/koinos/EmbeddedProto
+git clone --recursive https://github.com/Embedded-AMS/EmbeddedProto
 pushd EmbeddedProto
 
 git checkout $PB_EMBEDDED_CPP_VERSION
