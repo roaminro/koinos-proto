@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package koinos.rpc.plugin;
+option go_package = "github.com/koinos/koinos-proto-golang/koinos/rpc/plugin";
+
+import "koinos/rpc/rpc.proto";
+
+message submit_data_request {
+   bytes data = 1;
+}
+
+message submit_data_response {
+   bytes data = 1;
+}
+
+message plugin_request {
+   oneof request {
+      rpc.reserved_rpc reserved = 1;
+      submit_data_request submit_data = 2;
+   }
+}
+
+message plugin_response {
+   oneof response {
+      rpc.reserved_rpc reserved = 1;
+      rpc.error_response error = 2;
+      submit_data_response submit_data = 3;
+   }
+}

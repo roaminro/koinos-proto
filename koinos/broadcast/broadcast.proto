@@ -49,3 +49,7 @@ message event_parcel {
    optional bytes transaction_id = 3 [(btype) = TRANSACTION_ID];
    protocol.event_data event = 4;
 }
+
+message plugin_broadcast {
+   bytes data = 1;
+}
